@@ -14,10 +14,10 @@ layout: default
 
 <div class="content">
   <div class="post">{{ content }}</div>
-  {% include share-page.html %}
+  {%- comment -%} {% include share-page.html %} {%- endcomment -%}
 </div>
-
-{% assign hasSimilar = '' %}
+{%- comment -%} Similar posts {%- endcomment -%}
+{%- comment -%} {% assign hasSimilar = '' %}
   {% for post in site.posts  %}
     {% assign postHasSimilar = false %}
       {% for tag in post.categories %}
@@ -43,7 +43,7 @@ layout: default
   {% if hasSimilar.size > 0 %}
   </ul>
 </div>
-{% endif %}
+{% endif %} {%- endcomment -%}
 
 <div class="PageNavigation">
   {% if page.previous.url %}
