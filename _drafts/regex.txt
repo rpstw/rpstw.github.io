@@ -1,0 +1,61 @@
+POSIX:BRE grep,ERE egrep
+	man 7 re_format
+
+Why don't you just learn Perl?
+Which can do everything you can do in Awk, Sed, and bash. ( and then some )
+PCRE Perl
+PCRE+
+
+Alter nation:  ̇ ̇ ̇| ̇ ̇ ̇| ̇ ̇ ̇
+Greedy quantifiers: *, +, ?, {num,num}
+
+Character:
+Character Shorthands: \n, (\t, \a, \b, \e, \f, \r, \v)
+Almost any character: .
+
+Character class:
+Normal classes: [a-z] and [ˆa-z]
+Class shorthands: \w, \d, \s, \W, \D, \S
+
+Unicode properties, blocks, and categories: \p{Prop}, \P{Prop}
+	Script:
+		python -c "import regex;match=regex.search(r'\p{Han}','日本語');print(match)"
+		python -c "import regex;match=regex.search(r'\p{z&&cc&&}','にほんご');print(match)"
+	Category:Tower 任务: 用户名非法字符 ( https://tower.im/teams/314603/todos/5654 )
+POSIX: [[:alpha:]]
+/asdasd/i
+
+Anchor:
+Start of line/string: ˆ, \A
+End of line/string: $, \Z, \z
+Word boundaries: \b, \B, \<, \>,
+
+(?<=dasfh)as   
+(?:dasfh)(as)
+abc abc ccc
+
+Grouping:
+Capturing/grouping parentheses: ( ̇ ̇ ̇),\0 $0 \1, \2, $1, $2
+Grouping-only parentheses: (?: ̇ ̇ ̇)
+Named capture: (?<Name> ̇ ̇ ̇)
+
+
+
+A nondeterministic finite automaton(NFA) is a 5-tuple (Q,Σ,δ,q0,F),
+A deterministic finite automaton(DFA) is a 5-tuple (Q,Σ,δ,q0,F),
+
+DFA
+
+NFA
+
+DFA+NFA
+
+DFA+DFA+NFA
+
+(PCREDFA+ BREDFA)
+where
+1. Q is a finite set of states,
+2. Σ is a finite alphabet,
+3. δ : Q × Σε −→ P (Q) is the transition function, 
+4. q0 ∈ Q is the start state, and
+5. F ⊆ Q is the set of accept states.

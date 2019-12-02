@@ -11,9 +11,9 @@ layout: default
     &raquo; {% for category in page.categories %}<a href="/category/{{ category }}">{{ category }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}
   </span>
 {% endif %}
-
+{% include toc.html html=content %}
 <div class="content">
-  <div class="post">{{ content }}</div>
+  <div class="post">{{ content | toc }}</div>
   {%- comment -%} {% include share-page.html %} {%- endcomment -%}
 </div>
 {%- comment -%} Similar posts {%- endcomment -%}
@@ -54,7 +54,7 @@ layout: default
   {% endif %}
 </div>
 
-<div class="disqus-comments">
+<!-- <div class="disqus-comments">
   <div id="disqus_thread"></div>
   <script type="text/javascript">
     /* <![CDATA[ */
@@ -70,4 +70,21 @@ layout: default
     })();
     /* ]]> */
   </script>
-</div>
+</div> -->
+
+<!--数学公式-->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ["\\(", "\\)"] ],
+      displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+    //,
+    //displayAlign: "left",
+    //displayIndent: "2em"
+  });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
