@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-I'm a Programmer from China.
+I'm a programmer from China Mainland.
